@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/blogger-admin/blogger-admin.iml" filepath="$PROJECT_DIR$/blogger-admin/blogger-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blogger-admin-sso/blogger-admin-sso.iml" filepath="$PROJECT_DIR$/blogger-admin-sso/blogger-admin-sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mini-blogger.iml" filepath="$PROJECT_DIR$/mini-blogger.iml" />
+    </modules>
+  </component>
+</project>
