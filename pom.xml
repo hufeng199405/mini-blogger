@@ -22,6 +22,10 @@
         <version>1.5.9.RELEASE</version>
     </parent>
 
+    <properties>
+        <spring-boot>1.5.9.RELEASE</spring-boot>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <!--spring boot start-->
@@ -29,15 +33,35 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
-                <version>1.5.9.RELEASE</version>
+                <version>${spring-boot}</version>
             </dependency>
 
             <!-- spring boot 支持amqp -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-amqp</artifactId>
-                <version>1.5.9.RELEASE</version>
+                <version>${spring-boot}</version>
+            </dependency>
+
+            <!--spring boot 支持test-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus_releases</id>
+            <name>Nexus Releases Repository</name>
+            <url>http://www.hufeng.site:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus_snapshots</id>
+            <name>Nexus Snapshots Repository</name>
+            <url>http://www.hufeng.site:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
