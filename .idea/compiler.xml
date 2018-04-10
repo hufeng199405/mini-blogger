@@ -6,11 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mini-blogger" />
+        <module name="blogger-admin" />
+        <module name="blogger-admin-sso" />
+        <module name="blogger-component" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mini-blogger" target="1.5" />
+      <module name="blogger-admin" target="1.6" />
+      <module name="blogger-admin-sso" target="1.6" />
+      <module name="blogger-component" target="1.6" />
+      <module name="mini-blogger" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
