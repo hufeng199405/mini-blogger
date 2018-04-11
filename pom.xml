@@ -49,6 +49,13 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring-boot}</version>
             </dependency>
+
+            <!--spring boot 支持web-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
