@@ -5,6 +5,7 @@ import com.rabbitmq.client.Channel;
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import component.ApplicationFactory;
 import component.config.RabbitmqConfig;
+import component.http.HttpUtils;
 import component.mq.RabbitMqFactory;
 import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
@@ -13,9 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -125,53 +126,29 @@ public class LoginController {
     }
 
     @RequestMapping("/httpPost")
-    public String httpPost(HttpServletResponse response) throws Exception {
+    public void httpPost(HttpServletResponse response) throws Exception {
 
-        URL url = new URL("https://www.baidu.com");
-
-        HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
-
-        connection.setRequestMethod("POST");
-        connection.setDoInput(true);
-        connection.setDoOutput(true);
-        connection.setRequestProperty("Accept", "text/xml,text/javascript,text/html");
-        connection.setRequestProperty("User-Agent", "stargate");
-        connection.setConnectTimeout(5000);
-        connection.setReadTimeout(5000);
-
-        connection.setHostnameVerifier(new HostnameVerifier() {
-            @Override
-            public boolean verify(String s, SSLSession sslSession) {
-                return true;
-            }
-        });
-
-        // 连接
-        connection.connect();
-
-        OutputStream outputStream = connection.getOutputStream();
-
-        InputStream inputStream = connection.getInputStream();
-
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-
-        // 返回值
-        if (connection.getResponseCode() == HttpStatus.SC_OK) {
-
-            logger.info("https://www.baidu.com连接成功！");
-        }
-
-        byte[] bytes = new byte[1024];
-
-        int len = 0;
-
-        while ((len = inputStream.read(bytes)) != -1) {
-
-            stream.write(bytes, 0, len);
-        }
+        byte[] bytes = HttpUtils.post("https://www.baidu.com");
 
         logger.info(new String(bytes, "UTF-8"));
 
-        return new String(bytes, "UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
+        response.setContentType("text/html;charset=utf-8");
+
+        response.setStatus(HttpStatus.SC_OK);
+
+        response.getOutputStream().print(new String(bytes, "UTF-8"));
+
+        response.getOutputStream().flush();
+
+        response.getOutputStream().close();
+    }
+
+    // 登录方法
+    @RequestMapping("/login")
+    public String login() throws Exception{
+
+        return "";
     }
 }
