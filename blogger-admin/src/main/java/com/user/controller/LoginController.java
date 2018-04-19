@@ -2,28 +2,16 @@ package com.user.controller;
 
 import com.rabbitmq.client.*;
 import com.rabbitmq.client.Channel;
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
+import com.user.service.UserService;
 import component.ApplicationFactory;
 import component.config.RabbitmqConfig;
-import component.http.HttpUtils;
 import component.mq.RabbitMqFactory;
-import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLSession;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.nio.ByteBuffer;
-import java.nio.channels.*;
 
 /**
  * 类备注：
@@ -43,6 +31,9 @@ public class LoginController {
 
     @Autowired
     private RabbitMqFactory rabbitMqFactory;
+
+    @Autowired
+    private UserService userService;
 
     @RequestMapping("/aa")
     public void aa() throws Exception {
@@ -125,7 +116,7 @@ public class LoginController {
         connection.close();
     }
 
-    @RequestMapping("/httpPost")
+   /* @RequestMapping("/httpPost")
     public void httpPost(HttpServletResponse response) throws Exception {
 
         byte[] bytes = HttpUtils.post("https://www.baidu.com");
@@ -143,11 +134,12 @@ public class LoginController {
         response.getOutputStream().flush();
 
         response.getOutputStream().close();
-    }
+    }*/
 
     // 登录方法
     @RequestMapping("/login")
-    public String login() throws Exception{
+    public String login() throws Exception {
+
 
         return "";
     }

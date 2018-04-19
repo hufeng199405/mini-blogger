@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration
-@SpringBootApplication(scanBasePackages = {"com.user.controller","component"})
+@SpringBootApplication(scanBasePackages = {"com.user"})
 public class AdminApplication {
 
     public static void main(String[] args){

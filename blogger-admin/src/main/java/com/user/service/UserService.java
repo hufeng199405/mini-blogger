@@ -1,5 +1,7 @@
 package com.user.service;
 
+import com.user.domain.UserRecord;
+
 /**
  * 类备注：用户service
  *
@@ -20,5 +22,5 @@ public interface UserService {
      * @return
      * @throws Exception
      */
-    User updateUserLogin(String userName, String password) throws Exception;
+    UserRecord updateUserLogin(String userName, String password) throws Exception;
 }
