@@ -1,10 +1,7 @@
 package com.user.domain;
 
-import org.springframework.context.annotation.Configuration;
-
 import java.util.Date;
 
-@Configuration
 public class UserRecord {
     private Integer userId;
 
