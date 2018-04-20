@@ -73,6 +73,21 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-version}</version>
             </dependency>
+
+            <!--springboot 支持freemarker-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-freemarker</artifactId>
+                <version>${spring-boot}</version>
+            </dependency>
+
+            <!--springboot 支持devtools-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <optional>true</optional>
+                <version>${spring-boot}</version>
+            </dependency>
             <!--spring boot end-->
 
             <!-- alibaba连接池 -->

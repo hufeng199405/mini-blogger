@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
             UserRecordExample.Criteria criteria = example.createCriteria();
 
             criteria.andUserNameEqualTo(userName);
-            criteria.andPasswordEqualTo(password);
+            criteria.andLoginPasswordEqualTo(password);
 
             int count = this.mapper.countByExample(example);
 
