@@ -6,7 +6,9 @@
 </head>
 <body>
 请看说明： ${test}<br/>
-<form action=""></form>
-<input type="text" name="username"/>
+<form action="/loginController/aa/111" method="post">
+    <input type="text" name="userName"/>
+    <input type="submit" value="提交"/>
+</form>
 </body>
 </html>
