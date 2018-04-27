@@ -9,12 +9,14 @@
         <module name="blogger-admin" />
         <module name="blogger-admin-sso" />
         <module name="blogger-component" />
+        <module name="blogger-kaptcha" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="blogger-admin" target="1.8" />
       <module name="blogger-admin-sso" target="1.6" />
       <module name="blogger-component" target="1.6" />
+      <module name="blogger-kaptcha" target="1.8" />
       <module name="mini-blogger" target="1.6" />
     </bytecodeTargetLevel>
   </component>

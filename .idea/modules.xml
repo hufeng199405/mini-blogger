@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/blogger-admin/blogger-admin.iml" filepath="$PROJECT_DIR$/blogger-admin/blogger-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/blogger-admin-sso/blogger-admin-sso.iml" filepath="$PROJECT_DIR$/blogger-admin-sso/blogger-admin-sso.iml" />
       <module fileurl="file://$PROJECT_DIR$/blogger-component/blogger-component.iml" filepath="$PROJECT_DIR$/blogger-component/blogger-component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blogger-kaptcha/blogger-kaptcha.iml" filepath="$PROJECT_DIR$/blogger-kaptcha/blogger-kaptcha.iml" />
       <module fileurl="file://$PROJECT_DIR$/mini-blogger.iml" filepath="$PROJECT_DIR$/mini-blogger.iml" />
     </modules>
   </component>

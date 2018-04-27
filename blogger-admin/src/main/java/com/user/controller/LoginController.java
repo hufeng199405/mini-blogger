@@ -33,7 +33,7 @@ public class LoginController {
     private UserService userService;
 
     // 登录方法
-    @RequestMapping(value = "/aa/{userName}",method = RequestMethod.POST)
+    /*@RequestMapping(value = "/aa/{userName}",method = RequestMethod.POST)
     public String login(HttpServletRequest request, HttpServletResponse response, @PathVariable("userName") String userName) throws Exception {
 
         //String userName = request.getParameter("userName");
@@ -43,6 +43,23 @@ public class LoginController {
         logger.info(RequestMethod.POST);
 
         UserRecord record = userService.updateUserLogin("hufeng", "199405");
+
+        if (record != null) {
+
+            // 如果登录成功，则缓存对象
+            HttpUtils.putSession(request.getSession(), LoginConstant.LOGIN_SUCCESS_SIGN.getValue(), record);
+        }
+
+        request.setAttribute("test", 1111);
+
+        return "index";
+    }*/
+
+    // 登录方法
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    public String login(HttpServletRequest request, HttpServletResponse response, UserRecord userRecord) throws Exception {
+
+        UserRecord record = userService.updateUserLogin(userRecord.getLoginName(), userRecord.getLoginPassword());
 
         if (record != null) {
 

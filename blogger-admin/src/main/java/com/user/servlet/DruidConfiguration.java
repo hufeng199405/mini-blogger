@@ -71,4 +71,17 @@ public class DruidConfiguration {
 
         return filterRegistrationBean;
     }
+
+    @Bean
+    public ServletRegistrationBean generateCheckCodeImg() throws Exception{
+
+        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean();
+
+        servletRegistrationBean.setServlet(new CheckImgServlet());
+
+        // 添加路径映射
+        servletRegistrationBean.addUrlMappings("/CheckImgServlet");
+
+        return servletRegistrationBean;
+    }
 }
