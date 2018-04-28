@@ -61,10 +61,12 @@
             <version>6.0.6</version>
         </dependency>
 
+        <!--验证码模块 start-->
         <dependency>
             <groupId>com.miniblogger</groupId>
             <artifactId>blogger-kaptcha</artifactId>
         </dependency>
+        <!--验证码模块 end-->
 
         <dependency>
             <groupId>org.slf4j</groupId>

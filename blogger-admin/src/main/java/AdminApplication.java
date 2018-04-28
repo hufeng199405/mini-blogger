@@ -25,7 +25,7 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 @Configuration
-@ComponentScan("com")
+@ComponentScan({"com","firstpage"})
 @MapperScan("com.*.mapper")
 @ServletComponentScan
 public class AdminApplication extends SpringBootServletInitializer{
