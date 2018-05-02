@@ -13,6 +13,8 @@ spring:
     expose-session-attributes: false
     expose-spring-macro-helpers: false
     request-context-attribute: request
+    settings:
+      classic_compatible: true
   #设置static目录下的文件为静态资源文件
   mvc:
     static-path-pattern: /static/**

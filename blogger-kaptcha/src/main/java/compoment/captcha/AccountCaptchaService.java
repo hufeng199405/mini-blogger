@@ -13,6 +13,15 @@ public interface AccountCaptchaService {
     String generateCaptchaKey() throws Exception;
 
     /**
+     * 获取验证码文字
+     *
+     * @param key
+     * @return
+     * @throws Exception
+     */
+    String getCaptchaText(String key) throws Exception;
+
+    /**
      * 生成验证码图片
      *
      * @param captchaKey

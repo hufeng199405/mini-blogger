@@ -46,6 +46,9 @@ public class CheckImgServlet extends HttpServlet {
 
             String key = accountCaptchaService.generateCaptchaKey();
 
+            // 获取验证码
+            String checkCode = accountCaptchaService.getCaptchaText(key);
+
             byte[] resultByte = accountCaptchaService.generateCaptchaImage(key);
 
             OutputStream stream = resp.getOutputStream();

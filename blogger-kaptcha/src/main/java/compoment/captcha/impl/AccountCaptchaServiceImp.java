@@ -95,6 +95,18 @@ public class AccountCaptchaServiceImp implements AccountCaptchaService {
         return outputStream.toByteArray();
     }
 
+    /**
+     * 获取验证码文字
+     *
+     * @param key
+     * @return
+     * @throws Exception
+     */
+    public String getCaptchaText(String key) throws Exception {
+
+        return this.captchaMap.get(key);
+    }
+
     @Override
     public void setPreDefinedTexts(List<String> preDefinedTexts) {
 
