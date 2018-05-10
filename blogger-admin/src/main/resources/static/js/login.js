@@ -7,7 +7,7 @@ $(function () {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            username: {
+            loginName: {
                 message: '用户名验证失败',
                 validators: {
                     notEmpty: {
@@ -24,7 +24,7 @@ $(function () {
                     }
                 }
             },
-            password: {
+            loginPassword: {
                 message: '用户名验证失败',
                 validators: {
                     notEmpty: {
@@ -40,16 +40,6 @@ $(function () {
                 validators: {
                     notEmpty: {
                         message: '验证码不能为空'
-                    }
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: '邮箱不能为空'
-                    },
-                    emailAddress: {
-                        message: '邮箱地址格式有误'
                     }
                 }
             }

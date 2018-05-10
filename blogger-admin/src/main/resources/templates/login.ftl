@@ -57,7 +57,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password" class="sr-only">密码</label>
-                    <input type="password" class="form-control" name="password" placeholder="密码" autocomplete="off">
+                    <input type="password" class="form-control" name="registerPassword" placeholder="密码" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="password" class="sr-only">确认密码</label>
