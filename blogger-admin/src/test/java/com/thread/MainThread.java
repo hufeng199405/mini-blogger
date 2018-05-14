@@ -11,7 +11,7 @@ package com.thread;
  */
 public class MainThread {
 
-    public static void main(String[] args) throws Exception {
+    /*public static void main(String[] args) throws Exception {
 
         Main1Test main1Test = new Main1Test();
 
@@ -22,5 +22,22 @@ public class MainThread {
         ThreadTest threadTest2 = new ThreadTest("b", main1Test);
 
         threadTest2.start();
+    }*/
+
+    public static void main(String[] args) throws Exception {
+
+        StaticThread main1Test = new StaticThread();
+
+        Main2Test threadTest1 = new Main2Test();
+
+        new Thread(threadTest1).start();
+
+        Main3Test threadTest3 = new Main3Test();
+
+        new Thread(threadTest3).start();
+
+        Main4Test threadTest4 = new Main4Test(main1Test);
+
+        new Thread(threadTest4).start();
     }
 }
