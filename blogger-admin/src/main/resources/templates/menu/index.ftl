@@ -33,6 +33,9 @@
     <ol id="test7">
         <todo-item v-for="grocery in groceryList" v-bind:todo="grocery" v-bind:key="grocery.id"></todo-item>
     </ol>
+    <div id="test8">
+        <input type="text" v-bind:id="currentId+'test'"/>
+    </div>
 </body>
 
 <script src="${request.contextPath}/static/js/vue.js"></script>
@@ -117,6 +120,14 @@
                 {id:2,text:'test3'},
                 {id:3,text:'test4'}
             ]
+        }
+    });
+
+    var app8 = new Vue({
+
+        el:'#test8',
+        data:{
+            currentId:'mYId'
         }
     });
 </script>

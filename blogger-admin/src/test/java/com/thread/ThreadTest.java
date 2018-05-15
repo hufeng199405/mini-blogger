@@ -28,9 +28,13 @@ public class ThreadTest extends Thread {
         if("a".equals(this.name)){
 
             main1Test.printHello(this.name);
+
+            System.out.println(this.name+"运行完成");
         } else {
 
             main1Test.printHello2(this.name);
+
+            System.out.println(this.name+"运行完成");
         }
     }
 }
