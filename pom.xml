@@ -32,6 +32,8 @@
         <kaptcha-version>2.3.2</kaptcha-version>
         <logback.version>1.1.7</logback.version>
         <slf4j.version>1.7.21</slf4j.version>
+        <xstream.version>1.4.9</xstream.version>
+        <dom4j.version>2.1.0</dom4j.version>
     </properties>
 
     <dependencyManagement>
@@ -140,6 +142,20 @@
                 <version>${logback.version}</version>
             </dependency>
             <!--日志组件jar end-->
+
+            <!--xstream-->
+            <dependency>
+                <groupId>com.thoughtworks.xstream</groupId>
+                <artifactId>xstream</artifactId>
+                <version>${xstream.version}</version>
+            </dependency>
+
+            <!--dom4j-->
+            <dependency>
+                <groupId>org.dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
