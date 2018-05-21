@@ -1,5 +1,8 @@
 package com.thread;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
+
 /**
  * 类备注：
  *
@@ -11,20 +14,20 @@ package com.thread;
  */
 public class Main1Test {
 
-    synchronized public void printHello(String name) {
+    public void printHello(String name) {
 
         System.out.println("this is hello11" + name);
 
         try {
 
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (Exception e) {
 
             e.printStackTrace();
         }
     }
 
-    synchronized public void printHello2(String name) {
+    public void printHello2(String name) {
 
         System.out.println("this is hello22" + name);
 
